@@ -131,3 +131,17 @@ ax.set_ylabel("Cohesion (MPa)")
 ax.set_xlim(0.2, 0.9)  # force X axis from 0.2 to 0.9
 
 st.pyplot(fig)
+
+# --------------------------------------------------------
+# Explanation text
+# --------------------------------------------------------
+st.markdown("""
+**Notes on theory and assumptions:**
+
+- Normal and shear stresses on the fault plane are calculated using principal stresses and the fault orientation (dip & strike).
+- The failure envelope is defined by the **Internal Friction Coefficient** and **Cohesive Strength**.
+- Fracture stability (Δp) is the extra pore pressure needed to reactivate the fault.
+- Maximum column height is derived from Δp and the density difference between water and gas.
+- Results are simplified and assume homogeneous stress and rock properties.
+""")
+
