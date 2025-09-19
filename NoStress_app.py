@@ -27,9 +27,9 @@ st.title("Fault Stability & Column Height")
 st.sidebar.header("Input Parameters")
 
 # Stress gradients (MPa/km → Pa/m)
-sigma_v_grad = st.sidebar.number_input("Vertical stress gradient (MPa/km)", 20.0) * 1e6 / 1000
-sigma_H_grad = st.sidebar.number_input("Max horizontal stress gradient (MPa/km)", 25.0) * 1e6 / 1000
-sigma_h_grad = st.sidebar.number_input("Min horizontal stress gradient (MPa/km)", 15.0) * 1e6 / 1000
+sigma_v_grad = st.sidebar.number_input("Vertical stress gradient (MPa/km)", min_value=10.0, max_value=50.0, value=20.0) * 1e6 / 1000
+sigma_H_grad = st.sidebar.number_input("Max horizontal stress gradient (MPa/km)", min_value=10.0, max_value=50.0, value=25.0) * 1e6 / 1000
+sigma_h_grad = st.sidebar.number_input("Min horizontal stress gradient (MPa/km)", min_value=10.0, max_value=50.0, value=23.0) * 1e6 / 1000
 pf_grad      = st.sidebar.number_input("Fluid pressure gradient (MPa/km)", 10.0) * 1e6 / 1000
 
 # Geometry & fluid
